@@ -1,0 +1,546 @@
+.background-image
+{
+  position: relative;
+}
+
+.text-block 
+{
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.boxes .coloumn
+{
+  width:100px;
+  height: 100px;
+
+}
+
+
+
+body
+{
+  font: 10px/1.5 Arial, Helvetica,sans-serif;
+  padding:0;
+  margin:0;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: white;
+}
+
+.box
+{
+  position: relative;
+  width: 750px;
+  height: 500px;
+  background: #000;
+  overflow: hidden;
+
+}
+
+.box .image
+{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+
+}
+
+.box .image span
+{
+  width: 25%;
+  height: 100%;
+  background: url(image.jpg);
+  transition: 0.5s;
+}
+
+.box:hover .image span
+{
+ transform: translateY(-100%);
+}
+
+.box .image span:nth-child(1)
+{
+  background-position: 0; 
+  transition-delay: 0s; 
+}
+
+
+.box .image span:nth-child(2)
+{
+  background-position: 33.33%; 
+  transition-delay: 0.1s; 
+}
+
+.box .image span:nth-child(3)
+{
+  background-position: 66.66%; 
+  transition-delay: 0.2s; 
+}
+
+.box .image span:nth-child(4)
+{
+  background-position: 100%; 
+  transition-delay: 0.3s; 
+}
+
+.box .content
+{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 60px;
+  box-sizing: border-box;
+  text-align: center;
+  transition: 0.5s;
+  transform: translateY(100%);
+}
+
+.box:hover .content
+{ 
+  transition-delay: 0.5s;
+  transform: translateY(0); 
+}
+
+.box .content h2
+{
+  color: #fff;
+  font-size:  30px;
+  font-family: sans-serif;
+  text-transform: uppercase;
+}
+
+.box .content p
+{
+  color: #fff;
+  font-size:  16px;
+  font-family: sans-serif;
+}
+
+
+
+a
+{
+    color: black;
+    text-decoration: none; /* no underline */
+}
+a:hover
+ { 
+  color:#ffcc00; 
+  text-decoration: none;
+}
+
+body
+{
+  font: 15px/1.5 Arial, Helvetica,sans-serif;
+  padding:0;
+  margin:0;
+  background-color:#ccfff5;
+}
+
+/* Global */
+.container{
+  width:80%;
+  margin:auto;
+  overflow:hidden;
+}
+
+#navbarTogglerDemo02 ul
+{
+  margin:0;
+  padding:0;
+  display: flex;
+}
+#navbarTogglerDemo02 ul li
+{
+  list-style: none;
+  margin: 0 15px;
+  transition: 0.5s; 
+}
+#navbarTogglerDemo02 ul li a
+{
+  display: block;;
+  position: relative;
+  text-decoration: none;
+  padding: 3px;
+  font-size: 15px;
+  font-family: sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  transition: 0.5s;
+  margin-left: 15px;
+  width:115%; 
+}
+#navbarTogglerDemo02 ul li a:hover
+{
+  background-color: #ffff4d;
+
+}
+/*
+<---------------hover effect---------------->
+ul:hover li a
+{
+  transform: scale(1.5);
+  opacity: .2;
+  filter: blur(5px);
+}
+ul li a:hover
+{
+  transform: scale(2);
+  opacity: 1;
+  filter: blur(0);
+}
+ul li a:before
+{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ff6600;
+  transition: 0.5s;
+  transform-origin: right;
+  transform: scaleX(0);
+  z-index: -1;
+}
+ul li a:hover:before
+{
+  transition: transform 0.5s;
+  transform-origin:left;
+  transform: scaleX(1);
+}
+<----------------------end------------------>
+*/
+.button_1{
+  height:38px;
+  background:#e8491d;
+  border:0;
+  padding-left: 20px;
+  padding-right:20px;
+  color:#ffffff;
+}
+
+.dark{
+  padding:15px;
+  background:#35424a;
+  color:#ffffff;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+
+/* Header **/
+header{
+  background:#52aeb7;
+  color:#ffffff;
+  padding-top:30px;
+  min-height:70px;
+  border-bottom:#cc66ff 3px solid;
+}
+
+header a{
+  color:#ffffff;
+  text-decoration:none;
+  text-transform: uppercase;
+  font-size:16px;
+}
+
+header li{
+  float:left;
+  display:inline;
+  padding: 0 20px 0 20px;
+}
+
+header #branding{
+  float:left;
+}
+
+header #branding h1{
+  margin:0;
+}
+
+header nav{
+  float:right;
+  margin-top:10px;
+}
+
+header .highlight, header .current a{
+  color:#e8491d;
+  font-weight:bold;
+}
+
+header a:hover{
+  color:#cccccc;
+  font-weight:bold;
+}
+
+
+/* Media Queries */
+@media(max-width: 768px){
+  header #branding,
+  header nav,
+  header nav li,
+  #newsletter h1,
+  #newsletter form,
+  #boxes .box,
+  article#main-col,
+  #blocks,
+  aside#sidebar{
+    float:none;
+    text-align:center;
+    width:100%;
+  }
+
+  header{
+    padding-bottom:20px;
+  }
+
+  #showcase h1{
+    margin-top:40px;
+  }
+
+  #newsletter button, .quote button{
+    display:block;
+    width:100%;
+  }
+
+  #newsletter form input[type="email"], .quote input, .quote textarea{
+    width:100%;
+    margin-bottom:5px;
+  }
+}
+#carouselExampleIndicators
+{
+  height:auto; 
+  width:auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  overflow:hidden;
+  position:center;
+}
+/*---------------------------------------------------------------------------------------------------*/
+#blocks
+{
+  border-radius: 25px;
+border: #00aaff 1px solid; 
+height: auto;
+width: 33%;
+background-color: #e6e6ff;
+margin: 5px auto;
+
+}
+.row  p 
+{
+    margin-top: 50px;
+    margin-bottom: 1rem;
+}
+.row h4
+{
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+#textblock
+{
+  padding: 25px 0px; 
+  text-align: center;
+  background-color: #f7f7f7;
+  margin: 50px 0px;
+  text-decoration-color: black;
+  max-width: 100%;
+  position: center;
+}
+#textblock h5
+{
+  text-align: center;
+  margin: 100px 30px;
+  position: center;
+}
+#textblock p
+{
+text-align: center;
+margin: 5px;
+
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color:white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+}
+.button4 {border-radius: 12px;}
+
+#gallery-block
+{
+margin: 15px auto;
+text-align: center;
+}
+
+/******************************************************************** Testimonials *************************************************************/
+#carouselExampleIndicators
+{
+  margin: 50px 200px;
+}
+
+/*--------------------------------------------------------------------------------------*/
+/* Style the container with a rounded border, grey background and some padding and margin */
+.testi {
+  border: 2px solid #000;
+  background-color: #ffff66;
+  border-radius: 5px;
+  padding: 16px;
+  margin: 16px 0;
+  height: 200px;
+}
+
+/* Clear floats after containers */
+.testi::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Float images inside the container to the left. Add a right margin, and style the image as a circle */
+.testi img {
+  float: left;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+/* Increase the font-size of a span element */
+.testi span {
+  font-size: 20px;
+  margin-right: 15px;
+}
+.testi .testi-content
+{
+
+}
+/* Add media queries for responsiveness. This will center both the text and the image inside the container */
+@media (max-width: 500px) {
+  .testi {
+    text-align: center;
+  }
+
+  .testi img {
+    margin: auto;
+    float: none;
+    display: block;
+  }
+}
+
+/******************************************************************* Footer *******************************************************************/
+#foot-row
+{
+  width: 100%;
+  background-color: black;
+  color: white;
+
+
+}
+
+/*------------------------------------------------sidebar-------------------------------------------------------*/
+/* The side navigation menu */
+.sidebar 
+{
+  margin-top: 10%;
+  padding: 0;
+  position: fixed;
+  overflow: hidden;
+  width: 7%;
+  z-index:99;
+  height: 99%;
+  background: transparent;
+  text-decoration: none;
+}
+
+
+/* Sidebar links */
+.sidebar a {
+  display: block;
+  width:45%; 
+  color: black;
+  padding: 0%;
+  text-decoration: none;
+}
+.sidebar a img
+{
+  width:100% ; 
+  border:#4dffdb 2px solid ; 
+  margin:5px 5px
+}
+
+/* Active/current link */
+.sidebar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+.headerActive .current a
+{
+  color: black !important;
+  text-decoration: bold;
+  text-decoration: underline;
+
+}
+
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+/*@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+/*@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}*/
+/*-----------about us-----------*/
+#about-us
+{
+  margin: 10px !important;
+  background-color: #ff9999 !important;
+  text-align: center !important;
+  display: flex; 
+  width: 100%;
+}
+.about-us #gallery-block {
+    margin: 27px 80px;
+    text-align: center;
+}
+.mapp
+{
+  display: flex;
+}
